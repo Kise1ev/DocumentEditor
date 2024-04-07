@@ -1,0 +1,294 @@
+﻿<UserControl x:Class="DocumentEditor.UserControls.OrderUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="565" 
+             d:DesignWidth="600">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="2"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Логотип организации"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="LoadLogoButton" 
+                                Width="120" 
+                                Height="20" 
+                                HorizontalAlignment="Left"
+                                Click="LoadLogoButton_Click">
+                            <TextBlock Text="Загрузить логотип"/>
+                        </Button>
+
+                        <Button x:Name="ResetLogoButton" 
+                                Width="80" 
+                                Height="20" 
+                                HorizontalAlignment="Left"
+                                Margin="5 0 0 0"
+                                Click="ResetLogoButton_Click">
+                            <TextBlock Text="Сбросить"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="5"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Наименование организации - автор документа*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="OrganizationNameTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="OrganizationNameTextBox_TextChanged"
+                             GotFocus="OrganizationNameTextBox_GotFocus"
+                             LostFocus="OrganizationNameTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="OrganizationNameCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="OrganizationNameCursiveCheckBox_Checked"
+                              Unchecked="OrganizationNameCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="OrganizationNameBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="OrganizationNameBoldCheckBox_Checked"
+                                  Unchecked="OrganizationNameBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="6"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Наименование организации - автор документа"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentAuthorTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentAuthorTextBox_TextChanged"
+                             GotFocus="DocumentAuthorTextBox_GotFocus"
+                             LostFocus="DocumentAuthorTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="DocumentAuthorCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="DocumentAuthorCursiveCheckBox_Checked"
+                              Unchecked="DocumentAuthorCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="DocumentAuthorBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="DocumentAuthorBoldCheckBox_Checked"
+                                  Unchecked="DocumentAuthorBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="9"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="Наименование типа документа"
+                           TextWrapping="Wrap"
+                           Foreground="White"/>
+                    <TextBox x:Name="DocumentTypeTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentTypeTextBox_TextChanged"
+                             GotFocus="DocumentTypeTextBox_GotFocus"
+                             LostFocus="DocumentTypeTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="DocumentTypeCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="DocumentTypeCursiveCheckBox_Checked"
+                              Unchecked="DocumentTypeCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="DocumentTypeBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="DocumentTypeBoldCheckBox_Checked"
+                                  Unchecked="DocumentTypeBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="10"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="Дата документа"
+                           TextWrapping="Wrap"
+                           Foreground="White"/>
+                    <TextBox x:Name="DocumentDateTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentDateTextBox_TextChanged"
+                             GotFocus="DocumentDateTextBox_GotFocus"
+                             LostFocus="DocumentDateTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="DocumentDateCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="DocumentDateCursiveCheckBox_Checked"
+                              Unchecked="DocumentDateCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="DocumentDateBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="DocumentDateBoldCheckBox_Checked"
+                                  Unchecked="DocumentDateBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="11"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="Регистрационный номер документа"
+                           TextWrapping="Wrap"
+                           Foreground="White"/>
+                    <TextBox x:Name="DocumentRegisterNumberTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentRegisterNumberTextBox_TextChanged"
+                             GotFocus="DocumentRegisterNumberTextBox_GotFocus"
+                             LostFocus="DocumentRegisterNumberTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="DocumentRegisterNumberCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="DocumentRegisterNumberCursiveCheckBox_Checked"
+                              Unchecked="DocumentRegisterNumberCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="DocumentRegisterNumberBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="DocumentRegisterNumberBoldCheckBox_Checked"
+                                  Unchecked="DocumentRegisterNumberBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="13"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="Место составления (издания) документа"
+                           TextWrapping="Wrap"
+                           Foreground="White"/>
+                    <TextBox x:Name="DocumentPlaceTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentPlaceTextBox_TextChanged"
+                             GotFocus="DocumentPlaceTextBox_GotFocus"
+                             LostFocus="DocumentPlaceTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="DocumentPlaceCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="DocumentPlaceCursiveCheckBox_Checked"
+                              Unchecked="DocumentPlaceCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="DocumentPlaceBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="DocumentPlaceBoldCheckBox_Checked"
+                                  Unchecked="DocumentPlaceBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="17"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="Заголовок к тексту*"
+                           TextWrapping="Wrap"
+                           Foreground="White"/>
+                    <TextBox x:Name="TitleTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="TitleTextBox_TextChanged"
+                             GotFocus="TitleTextBox_GotFocus"
+                             LostFocus="TitleTextBox_LostFocus"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="TitleCursiveCheckBox"
+                              Content="Курсив"
+                              IsChecked="False"
+                              Foreground="White"
+                              Checked="TitleCursiveCheckBox_Checked"
+                              Unchecked="TitleCursiveCheckBox_Unchecked"/>
+                        <CheckBox x:Name="TitleBoldCheckBox"
+                                  Content="Жирный"
+                                  Margin="10 0 0 0"
+                                  IsChecked="False"
+                                  Foreground="White"
+                                  Checked="TitleBoldCheckBox_Checked"
+                                  Unchecked="TitleBoldCheckBox_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

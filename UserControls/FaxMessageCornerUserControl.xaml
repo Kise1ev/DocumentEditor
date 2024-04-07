@@ -1,0 +1,432 @@
+﻿<UserControl x:Class="DocumentEditor.UserControls.FaxMessageCornerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="565" 
+             d:DesignWidth="600">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="2"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Логотип организации"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="LoadLogoButton" 
+                                Width="120" 
+                                Height="20" 
+                                HorizontalAlignment="Left"
+                                Click="LoadLogoButton_Click">
+                            <TextBlock Text="Загрузить логотип"/>
+                        </Button>
+
+                        <Button x:Name="ResetLogoButton" 
+                                Width="80" 
+                                Height="20" 
+                                HorizontalAlignment="Left"
+                                Margin="5 0 0 0"
+                                Click="ResetLogoButton_Click">
+                            <TextBlock Text="Сбросить"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="4.1"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Код организации"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="OrganizationCodeTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             AcceptsReturn="False"
+                             TextChanged="OrganizationCodeTextBox_TextChanged"
+                             GotFocus="OrganizationCodeTextBox_GotFocus"
+                             LostFocus="OrganizationCodeTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="4.2"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Код формы документа"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentFormCodeTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             AcceptsReturn="False"
+                             TextChanged="DocumentFormCodeTextBox_TextChanged"
+                             GotFocus="DocumentFormCodeTextBox_GotFocus"
+                             LostFocus="DocumentFormCodeTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="5"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Наименование организации"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="OrganizationNameTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             AcceptsReturn="False"
+                             TextChanged="OrganizationNameTextBox_TextChanged"
+                             GotFocus="OrganizationNameTextBox_GotFocus"
+                             LostFocus="OrganizationNameTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="8"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Справочные данные об организации*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="BackgroundOrganizationInfoTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="BackgroundOrganizationInfoTextBox_TextChanged"
+                             GotFocus="BackgroundOrganizationInfoTextBox_GotFocus"
+                             LostFocus="BackgroundOrganizationInfoTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="10"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Дата документа"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentDateTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             AcceptsReturn="False"
+                             TextChanged="DocumentDateTextBox_TextChanged"
+                             GotFocus="DocumentDateTextBox_GotFocus"
+                             LostFocus="DocumentDateTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="11"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Регистрационный номер документа"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentRegisterNumberTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentRegisterNumberTextBox_TextChanged"
+                             GotFocus="DocumentRegisterNumberTextBox_GotFocus"
+                             LostFocus="DocumentRegisterNumberTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="12.1"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Ссылка на регистрационный номер документа"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentRegisterNumberFromLinkTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentRegisterNumberFromLinkTextBox_TextChanged"
+                             GotFocus="DocumentRegisterNumberFromLinkTextBox_GotFocus"
+                             LostFocus="DocumentRegisterNumberFromLinkTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="12.2"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Ссылка на регистрационный номер документа"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentRegisterNumberLinkTextBox"
+                             AcceptsReturn="False"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentRegisterNumberLinkTextBox_TextChanged"
+                             GotFocus="DocumentRegisterNumberLinkTextBox_GotFocus"
+                             LostFocus="DocumentRegisterNumberLinkTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="14"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Гриф ограничения к доступу документа*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="VultureRestrictionsTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="VultureRestrictionsTextBox_TextChanged"
+                             GotFocus="VultureRestrictionsTextBox_GotFocus"
+                             LostFocus="VultureRestrictionsTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="15"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Адресат*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="AddresseeTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="AddresseeTextBox_TextChanged"
+                             GotFocus="AddresseeTextBox_GotFocus"
+                             LostFocus="AddresseeTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="28"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Резолюция*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="ResolutionTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="ResolutionTextBox_TextChanged"
+                             GotFocus="ResolutionTextBox_GotFocus"
+                             LostFocus="ResolutionTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="17"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Заголовок к тексту*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="TitleTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="TitleTextBox_TextChanged"
+                             GotFocus="TitleTextBox_GotFocus"
+                             LostFocus="TitleTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="18"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Текст документа*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="SubtitleTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="SubtitleTextBox_TextChanged"
+                             GotFocus="SubtitleTextBox_GotFocus"
+                             LostFocus="SubtitleTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="19"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Отметка о наличии приложения*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="NoteAvailabilityApplicationTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="NoteAvailabilityApplicationTextBox_TextChanged"
+                             GotFocus="NoteAvailabilityApplicationTextBox_GotFocus"
+                             LostFocus="NoteAvailabilityApplicationTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="22.1"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Подпись (инициалы)"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="SignatureTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             AcceptsReturn="False"
+                             TextChanged="SignatureTextBox_TextChanged"
+                             GotFocus="SignatureTextBox_GotFocus"
+                             LostFocus="SignatureTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="22.2"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Подпись (должность)*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="SignaturePostTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="SignaturePostTextBox_TextChanged"
+                             GotFocus="SignaturePostTextBox_GotFocus"
+                             LostFocus="SignaturePostTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="25"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Отметка об исполнителе*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="PerformerMarkTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="PerformerMarkTextBox_TextChanged"
+                             GotFocus="PerformerMarkTextBox_GotFocus"
+                             LostFocus="PerformerMarkTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="30"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Отметка о направлении документа в дело*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="PerformanceMarkTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="PerformanceMarkTextBox_TextChanged"
+                             GotFocus="PerformanceMarkTextBox_GotFocus"
+                             LostFocus="PerformanceMarkTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <Border Style="{StaticResource BorderUserControl}">
+                    <TextBlock Text="27"
+                               Style="{StaticResource NumberUserControl}"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Отметка о поступлении документа в организацию*"
+                               TextWrapping="Wrap"
+                               Foreground="White"/>
+                    <TextBox x:Name="DocumentReceiptTextBox"
+                             Style="{StaticResource InputUserControl}"
+                             TextChanged="DocumentReceiptTextBox_TextChanged"
+                             GotFocus="DocumentReceiptTextBox_GotFocus"
+                             LostFocus="DocumentReceiptTextBox_LostFocus"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
