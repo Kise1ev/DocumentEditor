@@ -12,7 +12,7 @@
 <h1>📜 Requirements</h1>
 <h3><a href="https://www.nuget.org/packages/BouncyCastle">BouncyCastle</a> library has been used to implement various cryptographic algorithms, protocols, and utilities.</h3>
 <h3><a href="https://www.nuget.org/packages/BouncyCastle.Cryptography">BouncyCastle.Cryptography</a> library has been used to implement cryptographic algorithms and primitives.</h3>
-<h3><a href="https://www.nuget.org/packages/iTextSharp">iTextSharp</a> library was used to work with PDF files in the environment.NET</h3>
+<h3><a href="https://www.nuget.org/packages/iTextSharp">iTextSharp</a> library was used to work with PDF files in the environment .NET</h3>
 
 <h1>📦 Assembling</h1>
 <h3>1. Unpack the archive DocumentEditor.rar</h3>
